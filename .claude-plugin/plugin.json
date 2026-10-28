@@ -1,0 +1,17 @@
+{
+  "name": "spatial-omics-analysis-lens",
+  "displayName": "Spatial Omics Analysis Lens",
+  "version": "1.0.0",
+  "description": "Turn a pile of omics analyses into one report you can question: run the downstream analyses in Claude Code with full provenance, build a self-contained HTML report (what was done, what was found, what's next), then select any passage, figure or table cell to ask, edit, review or translate it; the same session answers, re-runs and rebuilds.",
+  "author": {
+    "name": "Yufan Chen",
+    "url": "https://github.com/yufchen723"
+  },
+  "homepage": "https://github.com/yufchen723/SpatialOmicsAnalysisLens",
+  "repository": "https://github.com/yufchen723/SpatialOmicsAnalysisLens",
+  "license": "MIT",
+  "keywords": ["omics", "single-cell", "spatial", "bioinformatics", "report", "provenance", "gene-regulatory-network", "cnv", "survival", "science"],
+  "documentationUrl": "https://github.com/yufchen723/SpatialOmicsAnalysisLens#readme",
+  "supportUrl": "https://github.com/yufchen723/SpatialOmicsAnalysisLens/issues",
+  "privacyPolicyUrl": "https://github.com/yufchen723/SpatialOmicsAnalysisLens#privacy-and-data"
+}

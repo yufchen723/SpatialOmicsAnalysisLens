@@ -1,0 +1,16 @@
+{
+  "name": "spatial-omics-analysis-lens",
+  "description": "Spatial Omics Analysis Lens: turn omics analyses into a report you can question, edit and review in the page.",
+  "owner": {
+    "name": "Yufan Chen",
+    "url": "https://github.com/yufchen723"
+  },
+  "plugins": [
+    {
+      "name": "spatial-omics-analysis-lens",
+      "source": "./",
+      "description": "Run omics and spatial-omics analyses with full provenance, build a self-contained HTML report, then Ask, Edit, Review and Translate it in the page with the same Claude Code session.",
+      "category": "research"
+    }
+  ]
+}

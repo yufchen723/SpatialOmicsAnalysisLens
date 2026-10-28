@@ -1,0 +1,264 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+html,body{margin:0;background:#fff}
+body{width:1800px;height:1000px;font-family:Inter,"Helvetica Neue",Arial,sans-serif;color:#1a1a1a;position:relative;overflow:hidden}
+.t{font-size:13px;fill:#1a1a1a}
+</style></head><body>
+<svg width="1800" height="1000" viewBox="0 0 1800 1000" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Helvetica Neue,Arial,sans-serif">
+<defs>
+ <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#55534e"/></marker>
+ <marker id="arb" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f6fb3"/></marker>
+ <marker id="aro" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#d97706"/></marker>
+ <filter id="sh" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity=".10"/></filter>
+</defs>
+<rect width="1800" height="1000" fill="#fbfbfa"/>
+
+<!-- Title -->
+<g transform="translate(60,46)">
+ <circle cx="22" cy="22" r="18" fill="none" stroke="#2f6fb3" stroke-width="4"/>
+ <line x1="35" y1="35" x2="50" y2="50" stroke="#2f6fb3" stroke-width="5" stroke-linecap="round"/>
+ <rect x="12" y="12" width="20" height="20" rx="2" fill="#2f6fb3" opacity=".18"/>
+ <line x1="15" y1="18" x2="29" y2="18" stroke="#2f6fb3" stroke-width="2"/><line x1="15" y1="23" x2="29" y2="23" stroke="#2f6fb3" stroke-width="2"/><line x1="15" y1="28" x2="24" y2="28" stroke="#2f6fb3" stroke-width="2"/>
+ <text x="66" y="30" font-size="30" font-weight="700">Spatial Omics Analysis Lens</text>
+ <text x="66" y="56" font-size="15" fill="#55534e">A Claude Code skill: analyze spatial-omics data → build a readable HTML report → ask, edit and review it in the page, with the same Claude session.</text>
+</g>
+
+<!-- ===== Column 1: Analyze ===== -->
+<g transform="translate(60,150)">
+ <text x="0" y="0" font-size="12" font-weight="700" fill="#2f6fb3" letter-spacing="1.5">1 · MANY ANALYSES IN THE TERMINAL</text>
+ <!-- terminal window -->
+ <rect x="0" y="16" width="330" height="300" rx="12" fill="#1c1c1b" filter="url(#sh)"/>
+ <circle cx="16" cy="32" r="5" fill="#ff5f57"/><circle cx="32" cy="32" r="5" fill="#febc2e"/><circle cx="48" cy="32" r="5" fill="#28c840"/>
+ <text x="165" y="36" font-size="11" fill="#8a887f" text-anchor="middle" font-family="ui-monospace,Menlo,monospace">claude — tumour_cohort/</text>
+ <g font-size="11" font-family="ui-monospace,Menlo,monospace">
+  <text x="14" y="60" fill="#79a9e0">&gt; QC the FFPE spatial ATAC+RNA sections</text>
+  <text x="14" y="76" fill="#b9b7b0">  ✓ 24 samples · bbduk → STAR → ArchR · 2 h</text>
+  <text x="14" y="94" fill="#79a9e0">&gt; cluster, integrate by sample, annotate</text>
+  <text x="14" y="110" fill="#b9b7b0">  ✓ Harmony · 19 cell types · RCTD + CARD</text>
+  <text x="14" y="128" fill="#79a9e0">&gt; infer GRNs per cell type</text>
+  <text x="14" y="144" fill="#b9b7b0">  ✓ scDoRI · 19 runs · 1,214 regulons</text>
+  <text x="14" y="162" fill="#79a9e0">&gt; call CNV clones; map to niches</text>
+  <text x="14" y="178" fill="#b9b7b0">  ✓ epiAneufinder · chr7+/chr10− in 15/16</text>
+  <text x="14" y="196" fill="#79a9e0">&gt; survival vs TCGA; pathway enrichment</text>
+  <text x="14" y="212" fill="#b9b7b0">  ✓ 76 tests · Cox · GSEA · 41 figures</text>
+  <text x="14" y="236" fill="#8a887f">  results/ … 2,318 files · 38 scripts · 11 GB</text>
+  <text x="14" y="252" fill="#8a887f">  figures/ … fig_v2_final_FINAL.png ×41</text>
+  <text x="14" y="268" fill="#8a887f">  which number went where? which seed?</text>
+  <text x="14" y="296" fill="#79a9e0">&gt; /spatial-omics-analysis-lens  build the report<tspan fill="#ededed">▌</tspan></text>
+ </g>
+</g>
+
+<!-- scattered outputs: the mess -->
+<g transform="translate(60,490)" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="#55534e">
+ <text x="0" y="0" font-size="12" font-weight="700" fill="#2f6fb3" letter-spacing="1.5" font-family="Inter,Helvetica Neue,Arial,sans-serif">… SCATTERED OUTPUTS</text>
+ <g transform="rotate(-6 60 60)"><rect x="8" y="22" width="124" height="30" rx="4" fill="#fff" stroke="#e5e3dd"/><text x="16" y="41">de_table_v3.csv</text></g>
+ <g transform="rotate(5 200 50)"><rect x="128" y="18" width="150" height="30" rx="4" fill="#fff" stroke="#e5e3dd"/><text x="136" y="37">grn_edges_final.tsv</text></g>
+ <g transform="rotate(-3 290 70)"><rect x="236" y="30" width="102" height="30" rx="4" fill="#fff" stroke="#e5e3dd"/><text x="244" y="49">km_plot_2.pdf</text></g>
+ <g transform="rotate(4 70 100)"><rect x="4" y="66" width="142" height="30" rx="4" fill="#fff" stroke="#e5e3dd"/><text x="12" y="85">umap_harmony_try7.png</text></g>
+ <g transform="rotate(-5 200 100)"><rect x="150" y="62" width="108" height="30" rx="4" fill="#fff" stroke="#e5e3dd"/><text x="158" y="81">notes_oct14.md</text></g>
+ <g transform="rotate(7 300 110)"><rect x="252" y="74" width="86" height="30" rx="4" fill="#fff" stroke="#e5e3dd"/><text x="260" y="93">log.txt ×38</text></g>
+ <g transform="rotate(-4 80 150)"><rect x="24" y="112" width="122" height="30" rx="4" fill="#fff" stroke="#e5e3dd"/><text x="32" y="131">cnv_clones.h5ad</text></g>
+ <g transform="rotate(3 220 150)"><rect x="146" y="112" width="160" height="30" rx="4" fill="#fff" stroke="#e5e3dd"/><text x="154" y="131">params_?? (not recorded)</text></g>
+ <text x="0" y="180" font-size="12" font-family="Inter,Helvetica Neue,Arial,sans-serif" fill="#55534e">Dozens of scripts, thousands of files, numbers copied</text>
+ <text x="0" y="198" font-size="12" font-family="Inter,Helvetica Neue,Arial,sans-serif" fill="#55534e">by hand, parameters nobody wrote down.</text>
+</g>
+
+<!-- arrow 1→2: integrate -->
+<g>
+ <path d="M392,300 C430,300 396,446 402,446" stroke="#2f6fb3" stroke-width="2.2" fill="none"/>
+ <path d="M392,600 C430,600 396,458 402,458" stroke="#2f6fb3" stroke-width="2.2" fill="none"/>
+ <rect x="400" y="436" width="62" height="32" rx="16" fill="#2f6fb3"/>
+ <text x="431" y="457" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">integrate</text>
+ <path d="M462,452 L481,452" stroke="#2f6fb3" stroke-width="2.2" fill="none" marker-end="url(#arb)"/>
+</g>
+
+<!-- ===== Column 2: Report mock ===== -->
+<g transform="translate(480,150)">
+ <text x="0" y="0" font-size="12" font-weight="700" fill="#2f6fb3" letter-spacing="1.5">2 · THE REPORT (self-contained HTML, works offline)</text>
+ <!-- window -->
+ <rect x="0" y="16" width="720" height="560" rx="12" fill="#fff" stroke="#e5e3dd" filter="url(#sh)"/>
+ <!-- top bar (Report Studio overlay) -->
+ <rect x="0" y="16" width="720" height="40" rx="12" fill="#1c1c1b"/><rect x="0" y="40" width="720" height="16" fill="#1c1c1b"/>
+ <g font-size="11.5" fill="#ededed">
+  <text x="16" y="41" font-weight="600">Report Studio</text>
+  <rect x="110" y="26" width="150" height="20" rx="5" fill="#2a2a29" stroke="#3a3a38"/><text x="120" y="40">Report: OPC-like ▾</text>
+  <rect x="268" y="26" width="92" height="20" rx="5" fill="#2a2a29" stroke="#3a3a38"/><text x="278" y="40">Versions ▾</text>
+  <text x="372" y="40" fill="#b9b7b0">[ ]</text>
+  <rect x="420" y="26" width="70" height="20" rx="5" fill="#d97706"/><text x="455" y="40" text-anchor="middle" fill="#fff" font-weight="600">Threads</text>
+  <rect x="498" y="26" width="70" height="20" rx="5" fill="#2a2a29" stroke="#3a3a38"/><text x="533" y="40" text-anchor="middle">Settings</text>
+  <text x="586" y="40" fill="#b9b7b0">↔ 1120</text>
+  <text x="640" y="40" fill="#b9b7b0">Review 7/12</text>
+ </g>
+ <!-- sidebar -->
+ <rect x="530" y="56" width="190" height="520" fill="#f4f3ef"/>
+ <g font-size="11" fill="#55534e">
+  <text x="544" y="80" font-weight="700" fill="#1a1a1a">Contents · Notes · Review</text>
+  <text x="544" y="104" font-weight="650" fill="#1a1a1a">▾ Part I · What Claude did</text>
+  <text x="556" y="122">I.1 Plan vs actual</text>
+  <text x="556" y="138">I.2 Decisions Claude made</text>
+  <text x="556" y="154">I.5 The tool in plain words</text>
+  <text x="556" y="170">I.7 Parameters</text>
+  <text x="544" y="194" font-weight="650" fill="#1a1a1a">▾ Part II · What Claude found</text>
+  <text x="556" y="212">II.1 Findings summary</text>
+  <rect x="546" y="220" width="170" height="18" rx="3" fill="#dbe7f6"/><text x="556" y="233" fill="#2f6fb3" font-weight="600">II.3 Regulators by niche</text>
+  <text x="556" y="256">II.5 How much to trust this</text>
+  <text x="544" y="280" font-weight="650" fill="#1a1a1a">▾ Part III · What's next</text>
+  <text x="556" y="298">III.1 Paper bridge</text>
+  <text x="556" y="314">III.2 Next analyses</text>
+  <text x="544" y="338" font-weight="650" fill="#1a1a1a">▸ Appendix  A.1 References …</text>
+  <text x="544" y="560" font-size="10" fill="#8a887f">v3.2 · 2026-10-28 · settings 9f3a</text>
+ </g>
+ <!-- main column -->
+ <g font-size="12">
+  <text x="22" y="82" font-size="16" font-weight="700">GRN per cell type · OPC-like</text>
+  <text x="22" y="100" fill="#55534e" font-size="11">669,086 spots · 18 sections / 16 patients · v3.2 · built 2026-10-28</text>
+  <text x="22" y="124" font-weight="600">In three lines</text>
+  <text x="22" y="142" fill="#55534e">• <tspan font-weight="700" fill="#1a1a1a">14 / 18</tspan> sections replicate the SOX10 regulon in hypoxic niches → II.3</text>
+  <text x="22" y="160" fill="#55534e">• Patient explains <tspan font-weight="700" fill="#1a1a1a">31 %</tspan> of regulon variance, section 9 % → II.4</text>
+  <text x="22" y="178" fill="#55534e">• Agrees with Greenwald 2024; differs from Neftel 2019 (platform) → II.5</text>
+  <!-- figure card -->
+  <rect x="22" y="196" width="490" height="196" rx="10" fill="#fff" stroke="#e5e3dd"/>
+  <!-- spatial map mock -->
+  <rect x="34" y="208" width="150" height="130" rx="4" fill="#f7f7f5"/>
+  <g>
+   <ellipse cx="100" cy="275" rx="58" ry="52" fill="#fde725" opacity=".55"/>
+   <ellipse cx="88" cy="268" rx="40" ry="36" fill="#35b779" opacity=".7"/>
+   <ellipse cx="80" cy="262" rx="24" ry="22" fill="#31688e" opacity=".85"/>
+   <ellipse cx="76" cy="258" rx="11" ry="10" fill="#440154"/>
+  </g>
+  <rect x="190" y="212" width="8" height="120" fill="url(#g1)"/>
+  <defs><linearGradient id="g1" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#440154"/><stop offset=".5" stop-color="#21918c"/><stop offset="1" stop-color="#fde725"/></linearGradient></defs>
+  <!-- bar chart mock -->
+  <g transform="translate(222,214)">
+   <line x1="0" y1="110" x2="150" y2="110" stroke="#c9c7c0"/>
+   <rect x="8" y="30" width="18" height="80" fill="#0072b2"/><rect x="34" y="52" width="18" height="58" fill="#0072b2"/><rect x="60" y="44" width="18" height="66" fill="#0072b2"/>
+   <rect x="86" y="76" width="18" height="34" fill="#e69f00"/><rect x="112" y="86" width="18" height="24" fill="#e69f00"/><rect x="138" y="92" width="10" height="18" fill="#e69f00"/>
+   <text x="75" y="124" font-size="9" fill="#55534e" text-anchor="middle">sections, by group</text>
+  </g>
+  <text x="34" y="356" font-size="12"><tspan font-weight="700">Fig 3.2 · SOX10 regulon activity.</tspan> Highest in hypoxic niches, replicated in 14/18 sections.</text>
+  <text x="34" y="372" font-size="10.5" fill="#55534e" font-family="ui-monospace,Menlo,monospace">results/03_grn/figures/sox10_niche.png · PNG · PDF</text>
+  <text x="34" y="386" font-size="11" fill="#2f6fb3">▸ About this figure — Input → Output · Axes · Interpretation · Context (linked)</text>
+  <!-- review chip -->
+  <rect x="396" y="206" width="108" height="20" rx="10" fill="#e8f5e9" stroke="#a5d6a7"/><text x="450" y="220" font-size="11" text-anchor="middle" fill="#2e7d32">✓ approved</text>
+  <!-- highlighted selection + icons -->
+  <rect x="22" y="406" width="296" height="18" rx="3" fill="#fff3a3"/>
+  <text x="26" y="419" font-size="12">… motif enrichment log2OR 2.1 in hypoxic niches …</text>
+  <text x="320" y="419" font-size="12" fill="#55534e">, consistent with Saraswat 2025.</text>
+  <circle cx="300" cy="446" r="15" fill="#fff" stroke="#c9c7c0"/><text x="300" y="451" text-anchor="middle" font-size="14" fill="#d97706">✳</text>
+  <circle cx="338" cy="446" r="15" fill="#fff" stroke="#c9c7c0"/>
+  <g transform="translate(329,437)" fill="none" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round"><path d="M2,13 L7,2 L12,13 M4,9 h6"/><path d="M12,6 h6 M15,4 v2 M12,9 c2,2 4,3 6,3"/></g>
+  <!-- note block -->
+  <rect x="22" y="470" width="490" height="88" rx="8" fill="#fbfbfa" stroke="#e5e3dd"/>
+  <text x="34" y="490" font-size="11.5" font-weight="700">▾ Note · Ask #2 · 11:42 <tspan font-weight="400" fill="#55534e">— “Can I trust this?”</tspan></text>
+  <rect x="34" y="498" width="3" height="20" fill="#fde047"/><text x="44" y="512" font-size="11" fill="#55534e">Selected · II.3 · “motif enrichment log2OR 2.1 in hypoxic niches”</text>
+  <text x="34" y="532" font-size="11.5"><tspan font-weight="600">Answer:</tspan> Moderately. Effect replicates in <tspan font-weight="700">14/18</tspan> sections, but motif ≠ binding.</text>
+  <text x="34" y="548" font-size="11.5" fill="#55534e"><tspan font-weight="600" fill="#1a1a1a">Evidence:</tspan> Fig 3.2; Schep 2017 · Greenwald 2024.  <tspan fill="#2f6fb3">More detail ▸</tspan></text>
+ </g>
+</g>
+
+<!-- callouts on report (orange) -->
+
+
+<!-- ===== Column 3: Report Studio loop ===== -->
+<g transform="translate(1250,150)">
+ <text x="0" y="0" font-size="12" font-weight="700" fill="#d97706" letter-spacing="1.5">3 · ASK · EDIT · REVIEW · TRANSLATE — IN THE PAGE</text>
+ <rect x="0" y="16" width="490" height="560" rx="12" fill="#fff" stroke="#e5e3dd" filter="url(#sh)"/>
+ <g font-size="12.5">
+  <text x="20" y="46" font-weight="700">Select text, a figure or a table cell → two icons</text>
+  <circle cx="30" cy="72" r="12" fill="#fff" stroke="#c9c7c0"/><text x="30" y="77" text-anchor="middle" font-size="12" fill="#d97706">✳</text>
+  <text x="50" y="68" font-weight="600">Ask / Edit — answered by <tspan fill="#d97706">this</tspan> Claude Code session</text>
+  <text x="50" y="86" fill="#55534e">It has the full analysis context, re-runs stages, rebuilds, cites.</text>
+  <text x="50" y="104" fill="#55534e">Ask presets: Explain simply · How computed? · Can I trust this?</text>
+  <text x="50" y="122" fill="#55534e">Edit presets: Fix text · Redo figure · Recompute · Add analysis</text>
+  <text x="50" y="140" fill="#55534e">Paste / drop images into the box, like the terminal chat.</text>
+
+  <circle cx="30" cy="172" r="12" fill="#fff" stroke="#c9c7c0"/>
+  <g transform="translate(23,165)" fill="none" stroke="#1a1a1a" stroke-width="1.4" stroke-linecap="round"><path d="M1,10 L5,1 L9,10 M2.5,7 h5"/><path d="M9,4.5 h5 M11.5,3 v1.5 M9,7 c1.5,1.5 3,2.3 5,2.3"/></g>
+  <text x="50" y="168" font-weight="600">Translate — instant, 50 languages, nothing saved</text>
+  <text x="50" y="186" fill="#55534e">Local <tspan font-family="ui-monospace,Menlo,monospace">claude -p</tspan> CLI, fast model, no tools; word mode with IPA / pinyin.</text>
+
+  <line x1="20" y1="206" x2="470" y2="206" stroke="#e5e3dd"/>
+  <text x="20" y="232" font-weight="700">Every exchange becomes a collapsible note</text>
+  <text x="20" y="250" fill="#55534e">• placed directly under the passage it was asked on</text>
+  <text x="20" y="268" fill="#55534e">• one conversation per selected text (#1, #2, …)</text>
+  <text x="20" y="286" fill="#55534e">• editable and deletable in the page; a question added to a note gets answered</text>
+
+  <line x1="20" y1="306" x2="470" y2="306" stroke="#e5e3dd"/>
+  <text x="20" y="332" font-weight="700">Review chips on every figure</text>
+  <rect x="20" y="344" width="84" height="20" rx="10" fill="#eceae4"/><text x="62" y="358" text-anchor="middle" font-size="11">unreviewed</text>
+  <rect x="112" y="344" width="80" height="20" rx="10" fill="#e8f5e9" stroke="#a5d6a7"/><text x="152" y="358" text-anchor="middle" font-size="11" fill="#2e7d32">✓ approved</text>
+  <rect x="200" y="344" width="98" height="20" rx="10" fill="#fff4e5" stroke="#f5c48a"/><text x="249" y="358" text-anchor="middle" font-size="11" fill="#b45309">needs change</text>
+  <rect x="306" y="344" width="80" height="20" rx="10" fill="#eef4fb" stroke="#c9dcf2"/><text x="346" y="358" text-anchor="middle" font-size="11" fill="#2f6fb3">? question</text>
+  <text x="20" y="386" fill="#55534e">approved = frozen · needs change → Edit · question → Ask</text>
+
+  <line x1="20" y1="406" x2="470" y2="406" stroke="#e5e3dd"/>
+  <text x="20" y="432" font-weight="700">Versions, without file clutter</text>
+  <g font-family="ui-monospace,Menlo,monospace" font-size="11.5" fill="#55534e">
+   <text x="20" y="452">&lt;slug&gt;__clean.html         current, no notes</text>
+   <text x="20" y="470">&lt;slug&gt;__with_notes.html    current, notes + Ask/Edit history</text>
+   <text x="20" y="488">report_review/versions/    every previous state, auto-archived</text>
+   <text x="20" y="506">…_report_v4.0__clean.html  frozen release copy to send</text>
+  </g>
+  <text x="20" y="534" fill="#55534e">Each export carries a “Reopen this report in Report Studio” section:</text>
+  <text x="20" y="552" fill="#55534e">folder, <tspan font-family="ui-monospace,Menlo,monospace">claude --resume</tspan>, start command, link; notes and marks return.</text>
+ </g>
+</g>
+
+<!-- ===== Bottom: how it connects ===== -->
+<g transform="translate(60,760)">
+ <text x="0" y="0" font-size="12" font-weight="700" fill="#55534e" letter-spacing="1.5">HOW THE PIECES CONNECT</text>
+ <g font-size="12">
+  <rect x="0" y="18" width="250" height="118" rx="10" fill="#1c1c1b"/>
+  <text x="16" y="42" font-weight="700" fill="#ededed">Claude Code terminal</text>
+  <text x="16" y="62" fill="#b9b7b0">Run the analyses: QC, clustering,</text>
+  <text x="16" y="80" fill="#b9b7b0">GRN, CNV, survival … with provenance</text>
+  <text x="16" y="98" fill="#b9b7b0">build_report.py → one HTML report</text>
+  <text x="16" y="116" fill="#b9b7b0">(or a set: one per cell type)</text>
+
+  <rect x="300" y="18" width="220" height="118" rx="10" fill="#fff" stroke="#e5e3dd"/>
+  <text x="316" y="42" font-weight="700">Browser</text>
+  <text x="316" y="62" fill="#55534e">Report + injected overlay</text>
+  <text x="316" y="80" fill="#55534e">Archival HTML never changed</text>
+  <text x="316" y="98" fill="#55534e">Dropdown switches reports</text>
+  <text x="316" y="116" fill="#55534e">Works offline without it</text>
+
+  <rect x="570" y="18" width="280" height="118" rx="10" fill="#fff" stroke="#e5e3dd"/>
+  <text x="586" y="42" font-weight="700">Report Studio server <tspan font-weight="400" fill="#55534e">(Python)</tspan></text>
+  <text x="586" y="62" fill="#55534e">127.0.0.1 + token · never 0.0.0.0</text>
+  <text x="586" y="80" fill="#55534e">report_review/: inbox, threads, notes,</text>
+  <text x="586" y="98" fill="#55534e">review, versions · one per session</text>
+  <text x="586" y="116" fill="#55534e">Keeps running after Claude closes</text>
+
+  <rect x="900" y="18" width="320" height="118" rx="10" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+  <text x="916" y="42" font-weight="700" fill="#d97706">The same Claude Code session</text>
+  <text x="916" y="62" fill="#55534e">Event-only waiter wakes it; hook as backup</text>
+  <text x="916" y="80" fill="#55534e">Reads anchor → data → literature</text>
+  <text x="916" y="98" fill="#55534e">Answers in ≤ 150 words, with citations</text>
+  <text x="916" y="116" fill="#55534e">Edits sources, re-runs, rebuilds, re-exports</text>
+
+  <rect x="1270" y="18" width="410" height="118" rx="10" fill="#fff" stroke="#e5e3dd"/>
+  <text x="1286" y="42" font-weight="700">Project ledger <tspan font-weight="400" fill="#55534e">(ledger/index.html)</tspan></text>
+  <text x="1286" y="62" fill="#55534e">Findings across reports, conflicts flagged</text>
+  <text x="1286" y="80" fill="#55534e">Lineage &amp; stale flags · question tree &amp; backlog</text>
+  <text x="1286" y="98" fill="#55534e">Paper bridge: approved figures → panels → text</text>
+  <text x="1286" y="116" fill="#55534e">Settings: .claude/report-settings.yaml (hashed)</text>
+ </g>
+ <path d="M250,78 L300,78" stroke="#55534e" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+ <text x="275" y="68" font-size="10" fill="#55534e" text-anchor="middle">serve</text>
+ <path d="M520,60 L570,60" stroke="#2f6fb3" stroke-width="2" fill="none" marker-end="url(#arb)"/>
+ <text x="545" y="50" font-size="10" fill="#2f6fb3" text-anchor="middle">request</text>
+ <path d="M570,96 L520,96" stroke="#2f6fb3" stroke-width="2" fill="none" marker-end="url(#arb)"/>
+ <text x="545" y="112" font-size="10" fill="#2f6fb3" text-anchor="middle">reply</text>
+ <path d="M850,60 L900,60" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#aro)"/>
+ <text x="875" y="50" font-size="10" fill="#d97706" text-anchor="middle">inbox</text>
+ <path d="M900,96 L850,96" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#aro)"/>
+ <text x="875" y="112" font-size="10" fill="#d97706" text-anchor="middle">answer</text>
+ <path d="M1220,78 L1270,78" stroke="#55534e" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+ <text x="1245" y="68" font-size="10" fill="#55534e" text-anchor="middle">findings</text>
+</g>
+
+<!-- footer -->
+<text x="60" y="960" font-size="11" fill="#8a887f">Voice everywhere: answer first · bullets ≤ 25 words · key number in bold · every interpretation set against published work, with verified links · Result / Interpretation / Hypothesis kept apart.</text>
+<text x="1740" y="960" font-size="11" fill="#8a887f" text-anchor="end">github.com/yufchen723/SpatialOmicsAnalysisLens</text>
+</svg>
+</body></html>
