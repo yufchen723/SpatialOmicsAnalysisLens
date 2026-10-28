@@ -43,9 +43,13 @@ Then, in a project folder: `/spatial-omics-analysis-lens build a report of the G
 
 **Claude (web, desktop):** upload `skills/spatial-omics-analysis-lens/SKILL.md` as a skill (Customize → Skills → + → Upload). The report-writing rules work there too; Report Studio (Ask / Edit in the page) needs a local Claude Code session.
 
+## Status
+
+**Tested so far only in Claude Code in a Linux terminal** (the author's own analysis workstation, with reports opened in a browser on the same machine or through an `ssh -N -L` tunnel). macOS and Windows, the Claude desktop app's preview panel, and the Claude web app have not been tested; the report-writing rules should work anywhere, but Report Studio (the local server, Ask / Edit in the page, Translate through the `claude` CLI) is only verified on Linux. Issues and reports from other setups are welcome.
+
 ## What works where
 
-| Feature | Claude Code in a terminal | Claude app (web, desktop) |
+| Feature | Claude Code in a terminal (tested on Linux) | Claude app (web, desktop; untested) |
 | --- | --- | --- |
 | Run analyses with provenance, build the report | ✓ | writing rules only |
 | Report Studio: Ask / Edit / Review / Translate in the page | ✓ | — (static copy via Artifact) |
